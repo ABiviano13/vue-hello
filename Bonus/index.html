@@ -10,22 +10,24 @@
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-<h1 id="app">
-    {{ message }}
-</h1>
+<div id="app">
+    <h1>{{ message }}</h1>
+    <img :src="image" alt="">
+</div>
+
+<img :src="image" alt="">
 
 <script>
-
   const { createApp } = Vue
 
-    createApp({
-      data() {
-            return {
-               message: 'Ciao a tutti! Questo è VueBello!',
-            }
-        }
-    }).mount('#app')
-
+  createApp({
+    data() {
+      return {
+        message: 'Ciao a tutti! Questo è VueBello!',
+        image: './img/download.jpg'
+      }
+    }
+  }).mount('#app')
 </script>
 
 </body>
